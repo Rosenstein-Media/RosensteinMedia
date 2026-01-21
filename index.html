@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew S. Rosenstein</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>    
+    <header class="top-ribbon">
+        <a href="../index.html">
+            <img src="../icons/logo/logo.jpg" alt="Logo" class="logo">
+        </a>
+
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="../services/index.html">Services</a></li>
+                <li><a href="../prints/index.html">Prints</a></li>
+                <li><a href="../blog/index.html">Blog</a></li>
+                <li><a href="../about_me/index.html">About</a></li>
+                <li><a href="../contact/index.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav class="mobile-nav">
+            <div class="hamburger-wrapper">
+                <div class="hamburger-menu">
+                    <img src="../icons/hamburger/hamburger.jpg" alt="Menu" class="hamburger-icon">
+                </div>
+                    <ul class="hamburger-dropdown">
+                         <li><a href="../services/index.html">Services</a></li>
+                        <li><a href="../prints/index.html">Prints</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                        <li><a href="../about_me/index.html">About</a></li>
+                        <li><a href="../contact/index.html">Contact</a></li>
+                    </ul>
+            </div>
+        </nav>
+
+        <nav class="instagram-nav">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/matt_rose_photo/" target="_blank">
+                        <img src="../icons/instagram/instagram_logo.jpg" alt="Instagram" class="instagram-icon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    
+    <!-- Landing Page Content -->
+    <div class="landing-container">
+        <img src="landing_background.jpg" alt="Landing Background" class="landing-background">
+       <div class="Nav-container">
+         <div class="text-button-wrapper">
+            <h1 class="site-title">Matthew S. Rosenstein</h1>
+            <h2 class="tagline">Capturing (E)motion Since 2010, One Frame At a Time</h2>
+            <a href="../gallery/index.html" class="landing-button">Photography</a>
+        </div>
+    </div>
+
+
+    <!-- Footer (Untouched) -->
+    <footer class="footer">
+        <p style="font-variant: small-caps;">© <strong>Rosenstein Media</strong></p>
+        <p style="font-variant: small-caps;">
+            <a href="../notice/index.html" style="color: white; text-decoration: none;">Notice</a>
+        </p>
+    </footer>
+ 
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburgerWrapper = document.querySelector(".hamburger-wrapper");
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+    // Ensure dropdown starts closed
+    hamburgerWrapper.classList.remove("active");
+
+    // Toggle dropdown on hamburger click
+    hamburgerMenu.addEventListener("click", function(e) {
+        e.stopPropagation(); // prevent the click from closing immediately
+        hamburgerWrapper.classList.toggle("active");
+    });
+
+    // Close dropdown when clicking anywhere outside
+    document.addEventListener("click", function(e) {
+        if (!hamburgerWrapper.contains(e.target)) {
+            hamburgerWrapper.classList.remove("active");
+        }
+    });
+});
+</script>
+
+
+
+</body>
+</html>

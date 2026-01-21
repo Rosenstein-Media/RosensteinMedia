@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matt Rosenstein - About</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="top-ribbon">
+        <a href="../index.html">
+            <img src="../icons/logo/logo.jpg" alt="Logo" class="logo">
+        </a>
+
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="../services/index.html">Services</a></li>
+                <li><a href="../prints/index.html">Prints</a></li>
+                <li><a href="../blog/index.html">Blog</a></li>
+                <li><a href="../about_me/index.html">About</a></li>
+                <li><a href="../contact/index.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav class="mobile-nav">
+            <div class="hamburger-wrapper">
+                <div class="hamburger-menu">
+                    <img src="../icons/hamburger/hamburger.jpg" alt="Menu" class="hamburger-icon">
+                </div>
+                    <ul class="hamburger-dropdown">
+                        <li><a href="../services/index.html">Services</a></li>
+                        <li><a href="../prints/index.html">Prints</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                        <li><a href="../about_me/index.html">About</a></li>
+                        <li><a href="../contact/index.html">Contact</a></li>
+                    </ul>
+            </div>
+        </nav>
+
+        <nav class="instagram-nav">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/matt_rose_photo/" target="_blank">
+                        <img src="../icons/instagram/instagram_logo.jpg" alt="Instagram" class="instagram-icon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class = 'intro-wrapper'>
+            <div class="intro-section">
+                <h1>Matthew S. Rosenstein</h1>
+                <h2 class="section-title">About Me</h2>
+            </div>
+        </div>
+       <!-- Main Container -->
+<div class="about-container">
+    
+    <!-- Left Column -->
+    <div class="left-column">
+        <!-- Image Subcontainer -->
+        <div class="image-container">
+            <img src="about-selfie.jpg" alt="Portrait of Matthew S. Rosenstein" class="about-portrait">
+        </div>
+        
+        <!-- Credentials & Experience Subcontainer -->
+        <div class="credentials-container">
+            <h3>Credentials+Experience</h3>
+            <p>Woodward Digital Media Program, Summer 2011, 2013</p>
+            <p>University of Michigan, BA 2018</p>
+            <p class="indent">As I See It Photography Competition Finalist, 2014</p>
+            <p>Indiana University Maurer School of Law, JD 2021</p>
+            <p class="indent">Indiana Journal of Law & Social Equality, Vol.9, Managing Editor</p>
+        </div>
+    </div>
+    
+    <!-- Right Column -->
+    <div class="right-column">
+        <!-- About Me Subcontainer -->
+        <div class="about-me-container">
+            <h3>Background</h3>
+            <p>I am a Chicago-based photographer  and professional with over fifteen years of experience capturing (e)motion. My media journey began in middle school, documenting skateboarding with my friends, and grew as I explored the intersection of visual arts and advocacy. I honed my craft through formal training at Woodward’s Digital Media Program and earned a BA from the University of Michigan, followed by a JD from Indiana University Maurer School of Law—-an unusual path that strengthened my writing, strategy, and negotiation skills. </p>
+            <p>After school, I naturally shifted into professional projects, including publications, brand campaigns, and sponsorship collaborations, working with clients ranging from core skate brands to university programs. Today, through Rosenstein Media, I continue to pursue projects that challenge me, tell stories I care about, and document the people and places that shape my world.</p>
+        </div>
+        
+        <!-- Skills Subcontainer -->
+        <div class="skills-container">
+            <h3>Skills</h3>
+            <p>Digital and Analog Photography, OCF/Studio Lighting, Digital Post Processing, Graphic Design, Web Design, Marketing, Negotiations and Contracting</p>
+        </div>
+        
+        <!-- Clients Subcontainer -->
+        <div class="clients-container">
+            <h3>Clients</h3>
+            <p>Playbook, Diet Skateboards, Day One Skateshop, Utopia Skateshop, Necto Nighclub, University of Michigan, Olé Soccer, Be Easy Boards, Spectrum Clothing</p>
+        </div>
+    </div>
+</div>
+    </main>
+
+<footer class="footer">
+    <div class = 'footer-wrapper'>
+    <ul class="footer-list">
+        <li class="tagline">Capturing (E)motion Since <span class="year-fix">2010</span>, One Frame At a Time</li>
+        <li>© <strong>Rosenstein Media</strong></li>
+        <li><a href="../notice/index.html">Notice</a></li>
+    </ul>
+    </div>
+</footer>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburgerWrapper = document.querySelector(".hamburger-wrapper");
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+    // Ensure dropdown starts closed
+    hamburgerWrapper.classList.remove("active");
+
+    // Toggle dropdown on hamburger click
+    hamburgerMenu.addEventListener("click", function(e) {
+        e.stopPropagation(); // prevent the click from closing immediately
+        hamburgerWrapper.classList.toggle("active");
+    });
+
+    // Close dropdown when clicking anywhere outside
+    document.addEventListener("click", function(e) {
+        if (!hamburgerWrapper.contains(e.target)) {
+            hamburgerWrapper.classList.remove("active");
+        }
+    });
+});
+</script>
+
+
+
+
+</body>
+
+</html>

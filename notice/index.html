@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matt Rosenstein - Disclaimers</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="top-ribbon">
+        <a href="../index.html">
+            <img src="../icons/logo/logo.jpg" alt="Logo" class="logo">
+        </a>
+
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="../services/index.html">Services</a></li>
+                <li><a href="../prints/index.html">Prints</a></li>
+                <li><a href="../blog/index.html">Blog</a></li>
+                <li><a href="../about_me/index.html">About</a></li>
+                <li><a href="../contact/index.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav class="mobile-nav">
+            <div class="hamburger-wrapper">
+                <div class="hamburger-menu">
+                    <img src="../icons/hamburger/hamburger.jpg" alt="Menu" class="hamburger-icon">
+                </div>
+                    <ul class="hamburger-dropdown">
+                         <li><a href="../services/index.html">Services</a></li>
+                        <li><a href="../prints/index.html">Prints</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                        <li><a href="../about_me/index.html">About</a></li>
+                        <li><a href="../contact/index.html">Contact</a></li>
+                    </ul>
+            </div>
+        </nav>
+
+        <nav class="instagram-nav">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/matt_rose_photo/" target="_blank">
+                        <img src="../icons/instagram/instagram_logo.jpg" alt="Instagram" class="instagram-icon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+  <main>
+     <div class = "intro-wrapper">
+      <div class="intro-section">
+        <h1>Matthew S. Rosenstein</h1>
+        <p class="tagline1">Capturing (e)motion since <span class="year-fix">2010</span>, one frame at a time</p>
+        <h2>Notice</h2>  
+      </div>
+    </div>
+
+    <div class = "main-content-wrapper">
+      <div class="content-container">
+          <h3 class="left-align">A Personal Note</h3>
+          <p>Hello:</p>
+          <p>Thank you for visiting my website.</p>
+          <p>I know it is not the most flashy and I must apologize if it looks or feels clunky. While I appreciate the offers I have received to improve this site, I need to be able to add, tweak, and adapt content as time goes on. To do that, I need to retain complete control while working with my limited knowledge of web design and development. To that end, I built this site entirely myself starting with zero knowledge of HTML, CSS, or Javascript. I designed all logos, and you guessed it, I created all the content that fills the pages too. I also did it this way to minimize cost: I only pay a yearly fee for the domain name and not even for hosting (i.e., server space). </p>
+          <p> It took a lot of work and different skills to get here and I am quite proud of it.</p>
+          <p>And so again, thank you.</p>
+
+          <h3 class="left-align">Legal Disclaimer</h3>
+          <p>Although I am a licensed attorney, the content on this website is for informational and artistic purposes only and does not constitute legal advice. Viewing this site, downloading images, or contacting me does not create an attorney-client relationship. If you require legal advice, you should consult a qualified attorney licensed in your jurisdiction.</p>
+          <p>I, Matthew S. Rosenstein, expressly disclaim any liability for reliance on the information presented on this site.</p>
+
+          <h3 class="left-align">Copyright Notice</h3>
+          <p>All photographs and content displayed on this website are the exclusive property of <strong>Rosenstein Media</strong> and are protected under applicable copyright laws.</p>
+          <p>Any reproduction, redistribution, publication, or other use of the images beyond personal viewing—whether in print, digital, or any other form—is strictly prohibited without prior written permission from Matthew S. Rosenstein. Unauthorized use of any content may result in legal action.</p>
+          <p>For licensing inquiries or permissions, please contact <a href="mailto:matt.rose.photo@gmail.com">matt.rose.photo@gmail.com</a>.</p>
+      </div>
+    </div>
+  </main>
+
+     <footer class="footer">
+    <div class = 'footer-wrapper'>
+    <ul class="footer-list">
+        <li class="tagline">Capturing (E)motion Since <span class="year-fix">2010</span>, One Frame At a Time</li>
+        <li>© <strong>Rosenstein Media</strong></li>
+        <li><a href="../notice/index.html">Notice</a></li>
+    </ul>
+    </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburgerWrapper = document.querySelector(".hamburger-wrapper");
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+    // Ensure dropdown starts closed
+    hamburgerWrapper.classList.remove("active");
+
+    // Toggle dropdown on hamburger click
+    hamburgerMenu.addEventListener("click", function(e) {
+        e.stopPropagation(); // prevent the click from closing immediately
+        hamburgerWrapper.classList.toggle("active");
+    });
+
+    // Close dropdown when clicking anywhere outside
+    document.addEventListener("click", function(e) {
+        if (!hamburgerWrapper.contains(e.target)) {
+            hamburgerWrapper.classList.remove("active");
+        }
+    });
+});
+</script>
+
+</body>
+
+</html>

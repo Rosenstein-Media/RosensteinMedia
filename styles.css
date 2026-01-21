@@ -1,0 +1,425 @@
+/*----------------------------------
+   General Styles
+----------------------------------*/
+body {
+    font-family: "Times New Roman", serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/*----------------------------------
+   Landing Container
+----------------------------------*/
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    min-height: calc(100vh - 45px - 70.36px);
+    position: relative;
+    width: 100%;
+}
+
+.landing-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/*----------------------------------
+   Nav Container (Title + Tagline + Button)
+----------------------------------*/
+.Nav-container {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;       /* desktop width */
+    max-width: 600px; /* optional cap */
+    margin: 0 auto;
+    gap: 0.5em;
+}
+
+.text-button-wrapper {
+    display: inline-flex;   /* shrink-to-fit the widest content */
+    flex-direction: column;        /* stack vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.text-button-wrapper h1,
+.text-button-wrapper h2 {
+    display: block;          /* now fills the wrapper */
+    width: 100%;             /* ensures text width matches wrapper */
+    margin: 0;
+    white-space: nowrap;     /* prevents line breaks */
+    text-align: center;      /* keeps text centered */
+}
+
+.landing-button {
+    display: block;          /* fills the wrapper width */
+    width: 100%;             /* matches widest text */
+    font-size: 1.2em;
+    font-variant: small-caps;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.landing-button:hover {
+    background-color: rgba(236, 233, 233, 0.475);
+    color: white;
+    transition-duration: 50ms;
+}
+
+/*----------------------------------
+   Top Ribbon
+----------------------------------*/
+.top-ribbon {
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.top-ribbon ul,
+.top-ribbon ul li {
+    list-style: none;  /* remove bullets */
+    margin: 0;          /* remove default spacing */
+    padding: 0;         /* remove default spacing */
+}
+
+.top-ribbon > a {
+    display: flex;
+    flex-shrink: 1;
+    flex-grow: 0;
+    min-width: 0;
+}
+
+.top-ribbon .logo {
+    height: auto;
+    max-height: 35px;
+    width: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    flex-shrink: 1;
+    flex-grow: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navigation Menu */
+.top-ribbon .desktop-nav {
+    display: flex;
+    gap: 15px;
+    flex-shrink: 0;
+    margin-left: auto; /* pushes desktop nav to the right */
+}
+
+.top-ribbon .desktop-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+.top-ribbon .desktop-nav ul li {
+    list-style: none;
+}
+
+.top-ribbon .desktop-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-variant: small-caps;
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+.mobile-nav {
+    margin-left: 0;    
+    flex: 0 0 auto;  /* prevent stretching */
+
+}
+
+.instagram-nav {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 15px;
+    flex-shrink: 0;
+}
+
+
+
+.instagram-icon {
+    width: 17px;
+    height: auto;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+/*----------------------------------
+   Titles & Tagline
+----------------------------------*/
+h1 {
+    font-size: 2.7em;
+    font-variant: small-caps;
+    margin: 0;
+    text-align: center;
+    color: white;
+    opacity: 100%;
+    width: 100%;
+}
+
+h2 {
+    font-size: 1.85em;
+    font-variant: small-caps;
+    margin: 10px 0 0 0;
+    text-align: center;
+    color: white;
+    opacity: 100%;
+    width: 100%;
+}
+
+.tagline {
+    font-size: 1.2em;
+    font-style: italic;
+    font-variant: small-caps;
+    margin: 0;
+    text-align: center;
+    color: white;
+    opacity: 100%;
+    width: 100%;
+}
+
+/*----------------------------------
+   Footer
+----------------------------------*/
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 0.9em;
+    font-variant: small-caps;
+    position: absolute;
+    line-height: 0.25;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/*----------------------------------
+   Hamburger Menu
+----------------------------------*/
+.hamburger-wrapper {
+    display: none;
+    position: relative;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 1.8em;
+    color: white;
+    cursor: pointer;
+    padding-right: 0;
+}
+
+.hamburger-dropdown li {
+    display: none;
+}
+
+
+/*----------------------------------
+   Media Query (kept intact)
+----------------------------------*/
+@media (max-width: 825px) {
+    /* Top Ribbon flex setup */
+    .top-ribbon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4px 8px;
+    }
+
+    /* Logo container flex */
+    .top-ribbon > a {
+        display: flex;
+        flex-shrink: 1;      
+        flex-grow: 1;        
+        min-width: 0;
+        margin-right: 10px;  
+    }
+
+    .top-ribbon .logo {
+        max-width: 85%;
+        max-height: 35px;    
+        width: auto;
+        height: auto;
+    }
+
+    /* Nav container (hamburger + Instagram) */
+    .top-ribbon nav {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Hamburger icon */
+    .hamburger-menu {
+        display: flex;             /* make container a flexbox */
+        align-items: center;       /* vertically center the img */
+        justify-content: center;   /* horizontally center if needed */
+        cursor: pointer;
+        padding: 0;
+        line-height: 0;            /* removes any inline-gap issues */
+    }
+
+    /* Hamburger image */
+    .hamburger-menu img {
+        display: block;
+        height: 17px;              /* match Instagram icon */
+        width: auto;
+    }
+
+
+    /* Instagram icon */
+    .instagram-icon {
+        display: block;
+        width: 17px;
+        margin-bottom: 0;
+    }
+
+
+    /* Hamburger dropdown - hidden by default */
+    .hamburger-dropdown {
+        display: none;
+        flex-direction: column;       /* vertical stacking */
+        position: absolute;
+        top: calc(100% + 4px);
+        right: 0px;
+        background-color: #333;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        min-width: 140px;
+        z-index: 2000;                /* above ribbon */
+    }
+
+    .hamburger-dropdown li {
+    display: block;
+    }
+
+    .hamburger-dropdown li a {
+        display: block;
+        padding: 12px;
+        color: white;
+        text-decoration: none;
+        font-variant: small-caps;
+        white-space: nowrap;
+    }
+
+    .hamburger-dropdown li a:hover {
+        background-color: rgba(236, 233, 233, 0.2);
+    }
+
+    /* Hamburger wrapper */
+    .hamburger-wrapper {
+        display: block;
+        position: relative;
+    }
+
+    /* Hide desktop nav in mobile */
+    .top-ribbon .desktop-nav {
+        display: none;
+    }
+
+    /* Show dropdown only when active */
+    .hamburger-wrapper.active .hamburger-dropdown {
+        display: flex;
+    }
+}
+
+
+@media (max-width: 685px) {
+
+    
+
+
+
+
+
+
+
+
+
+
+    .text-button-wrapper {
+        display: inline-flex;               /* treat all children as one unit */
+        flex-direction: column;             /* stack H1, H2, button */
+        align-items: center;                /* center everything horizontally */
+        justify-content: center;            /* center everything vertically */
+        width: auto;                        /* shrink-to-fit the widest child */
+        box-sizing: border-box;
+
+        /* NEW: scale everything proportionally */
+        transform: scale(0.7);              /* adjust 0.7 as needed for smaller screens */
+        transform-origin: top center;       /* keeps wrapper centered while scaling */
+    }
+
+    /* H1, tagline, and button remain 100% width, no individual clamps */
+    .text-button-wrapper h1,
+    .text-button-wrapper h2,
+    .text-button-wrapper .landing-button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+     .footer {
+      padding-top: 8px;
+      padding-bottom: 0px;
+    }
+    
+}   

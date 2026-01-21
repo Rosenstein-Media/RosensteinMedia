@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matt Rosenstein - Projects</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="top-ribbon">
+        <a href="../../index.html">
+            <img src="../../icons/logo/logo.jpg" alt="Logo" class="logo">
+        </a>
+
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="../../services/index.html">Services</a></li>
+                <li><a href="../../prints/index.html">Prints</a></li>
+                <li><a href="../../blog/index.html">Blog</a></li>
+                <li><a href="../../about_me/index.html">About</a></li>
+                <li><a href="../../contact/index.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav class="mobile-nav">
+            <div class="hamburger-wrapper">
+                <div class="hamburger-menu">
+                    <img src="../../icons/hamburger/hamburger.jpg" alt="Menu" class="hamburger-icon">
+                </div>
+                    <ul class="hamburger-dropdown">
+                        <li><a href="../../services/index.html">Services</a></li>
+                        <li><a href="../../prints/index.html">Prints</a></li>
+                        <li><a href="../../blog/index.html">Blog</a></li>
+                        <li><a href="../../about_me/index.html">About</a></li>
+                        <li><a href="../../contact/index.html">Contact</a></li>
+                    </ul>
+            </div>
+        </nav>
+
+        <nav class="instagram-nav">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/matt_rose_photo/" target="_blank">
+                        <img src="../../icons/instagram/instagram_logo.jpg" alt="Instagram" class="instagram-icon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+  <main>
+    <div class = 'intro-wrapper'>
+      <div class="intro-section">
+        <div class="title">
+          <h1><a href="../index.html">Photography</a></h1> 
+        </div>
+      </div>
+    </div>
+    
+    <div class = "category-wrapper">
+      <nav class="category-ribbon">
+        <ul>
+          <li><a href="../skateboarding/index.html">Skateboarding</a></li>
+          <li><a href="../cityscape/index.html">Cityscape</a></li>
+          <li><a href="../portrait/index.html">Portrait</a></li>
+          <li><a href="../landscape/index.html">Landscape</a></li>
+          <li><a href="../concert/index.html">Concert</a></li>
+          <li><a href="../automotive/index.html">Automotive</a></li>
+          <li><a href="#" class="active_theme">Projects</a></li>
+          <li><a href="../other/index.html">Other</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="gallery-wrap">
+      <section class="image-gallery">
+        
+        <a href="bladerunner/index.html">  
+            <div class="thumb-container">
+              <img src="thumbnails/dsc_4726_layers1-135.jpg" alt="Bladerunner" class="thumb" loading="lazy">
+              <span class="thumb-text">Bladerunner</span>
+            </div>
+        </a>
+
+        
+      </section>
+    </div>
+    
+  </main>
+
+ <footer class="footer">
+    <div class = 'footer-wrapper'>
+    <ul class="footer-list">
+        <li class="tagline">Capturing (E)motion Since <span class="year-fix">2010</span>, One Frame At a Time</li>
+        <li>© <strong>Rosenstein Media</strong></li>
+        <li><a href="../../notice/index.html">Notice</a></li>
+    </ul>
+    </div>
+  </footer>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const hamburgerWrapper = document.querySelector(".hamburger-wrapper");
+        const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+        // Ensure dropdown starts closed
+        hamburgerWrapper.classList.remove("active");
+
+        // Toggle dropdown on hamburger click
+        hamburgerMenu.addEventListener("click", function(e) {
+            e.stopPropagation(); // prevent the click from closing immediately
+            hamburgerWrapper.classList.toggle("active");
+        });
+
+        // Close dropdown when clicking anywhere outside
+        document.addEventListener("click", function(e) {
+            if (!hamburgerWrapper.contains(e.target)) {
+                hamburgerWrapper.classList.remove("active");
+            }
+        });
+    });
+
+
+    // PROJECTS DROPDOWN TOGGLE
+    const projBtn = document.querySelector('.projects-btn');
+    const projMenu = document.querySelector('.projects-menu');
+
+    // Toggle on click
+    projBtn.addEventListener('click', (e) => {
+        e.stopPropagation();  // prevents immediate closing
+        const isOpen = projMenu.style.display === 'block';
+        
+        // Toggle menu visibility
+        projMenu.style.display = isOpen ? 'none' : 'block';
+        
+        // Toggle active class on button
+        projBtn.classList.toggle('active', !isOpen);
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', () => {
+        projMenu.style.display = 'none';
+        projBtn.classList.remove('active'); // remove active state
+    });
+
+  </script>
+
+</body>
+
+</html>

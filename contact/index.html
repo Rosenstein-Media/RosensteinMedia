@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matt Rosenstein - Contact</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="top-ribbon">
+        <a href="../index.html">
+            <img src="../icons/logo/logo.jpg" alt="Logo" class="logo">
+        </a>
+
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="../services/index.html">Services</a></li>
+                <li><a href="../prints/index.html">Prints</a></li>
+                <li><a href="../blog/index.html">Blog</a></li>
+                <li><a href="../about_me/index.html">About</a></li>
+                <li><a href="../contact/index.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav class="mobile-nav">
+            <div class="hamburger-wrapper">
+                <div class="hamburger-menu">
+                    <img src="../icons/hamburger/hamburger.jpg" alt="Menu" class="hamburger-icon">
+                </div>
+                    <ul class="hamburger-dropdown">
+                        <li><a href="../services/index.html">Services</a></li>
+                        <li><a href="../prints/index.html">Prints</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                        <li><a href="../about_me/index.html">About</a></li>
+                        <li><a href="../contact/index.html">Contact</a></li>
+                    </ul>
+            </div>
+        </nav>
+
+        <nav class="instagram-nav">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/matt_rose_photo/" target="_blank">
+                        <img src="../icons/instagram/instagram_logo.jpg" alt="Instagram" class="instagram-icon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+  <main>
+    <div class = 'intro-wrapper'>
+      <div class="intro-section">
+            <h1>Contact</h1>
+      </div>
+   </div>
+    <!-- Google Form Embed -->
+ <div class="contact-form">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScpsh0gJB5IRD7nCJolXbWnPoKnxyzGeLar1E5EjD-XFzrV5w/viewform?embedded=true" 
+        frameborder="0" marginheight="0" marginwidth="0">
+    Loading…
+    </iframe>
+</div>  
+</main>
+
+<footer class="footer">
+    <div class = 'footer-wrapper'>
+    <ul class="footer-list">
+        <li class="tagline">Capturing (E)motion Since <span class="year-fix">2010</span>, One Frame At a Time</li>
+        <li>© <strong>Rosenstein Media</strong></li>
+        <li><a href="../notice/index.html">Notice</a></li>
+    </ul>
+    </div>
+</footer>
+
+
+ <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburgerWrapper = document.querySelector(".hamburger-wrapper");
+    const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+    // Ensure dropdown starts closed
+    hamburgerWrapper.classList.remove("active");
+
+    // Toggle dropdown on hamburger click
+    hamburgerMenu.addEventListener("click", function(e) {
+        e.stopPropagation(); // prevent the click from closing immediately
+        hamburgerWrapper.classList.toggle("active");
+    });
+
+    // Close dropdown when clicking anywhere outside
+    document.addEventListener("click", function(e) {
+        if (!hamburgerWrapper.contains(e.target)) {
+            hamburgerWrapper.classList.remove("active");
+        }
+    });
+});
+</script>
+
+
+</body>
+
+</html>

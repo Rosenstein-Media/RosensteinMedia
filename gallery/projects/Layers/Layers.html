@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matt Rosenstein - Projects</title>
+  <link rel="stylesheet" href="layers_styles.css">
+</head>
+
+<body>
+    <header class="top-ribbon">
+        <a href="../Landing_Page/Index.html">
+            <img src="../Images/Logo/logo.jpg" alt="Logo" class="logo">
+        </a>
+
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="../Services_Page/Index.html">Services</a></li>
+                <li><a href="../Prints_Page/Index.html">Prints</a></li>
+                <li><a href="../Blog_Page/Index.html">Blog</a></li>
+                <li><a href="../About_Page/Index.html">About</a></li>
+                <li><a href="../Contact_Page/Index.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav class="mobile-nav">
+            <div class="hamburger-wrapper">
+                <div class="hamburger-menu">
+                    <img src="../Images/hamburger/hamburger.jpg" alt="Menu" class="hamburger-icon">
+                </div>
+                    <ul class="hamburger-dropdown">
+                         <li><a href="../Services_Page/Index.html">Services</a></li>
+                        <li><a href="../Prints_Page/Index.html">Prints</a></li>
+                        <li><a href="../Blog_Page/Index.html">Blog</a></li>
+                        <li><a href="../About_Page/Index.html">About</a></li>
+                        <li><a href="../Contact_Page/Index.html">Contact</a></li>
+                    </ul>
+            </div>
+        </nav>
+
+        <nav class="instagram-nav">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/matt_rose_photo/" target="_blank">
+                        <img src="../Images/Instagram/Instagram_Logo.jpg" alt="Instagram" class="instagram-icon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+  <main>
+    <div class = 'intro-wrapper'>
+      <div class="intro-section">
+        <div class="title">
+          <h1><a href="../Photography_home/Index.html">Photography</a></h1> 
+        </div>
+      </div>
+    </div>
+    
+    <div class = "category-wrapper">
+      <nav class="category-ribbon">
+        <ul>
+        <li><a href="../Skateboarding/Index.html">Skateboarding</a></li>
+          <li><a href="../Cityscape/Index.html">Cityscape</a></li>
+          <li><a href="../Portrait/Index.html">Portrait</a></li>
+          <li><a href="../Landscape/Index.html">Landscape</a></li>
+          <li><a href="../Concert/Index.html">Concert</a></li>
+          <li><a href="../Automotive/Index.html">Automotive</a></li>
+          <li><a href="../Projects_Page/Index.html" class="active_theme">Projects</a></li>
+          <li><a href="../Other/Index.html">Other</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class ="projects-drop-wrapper">
+      <div class="projects-dropdown">
+        <button class="projects-btn">Select a Project/Series ▼</button>
+        <ul class="projects-menu">
+          <li><a href="../Projects/Bladerunner.html">Bladerunner</a></li>
+          <li><a href="../Projects/Layers.html">Layers</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gallery-wrap">
+      <section class="image-gallery">
+        <img src="placeholder1.jpg" alt="Sample 1">
+        <img src="placeholder2.jpg" alt="Sample 2">
+        <img src="placeholder3.jpg" alt="Sample 3">
+        <img src="placeholder4.jpg" alt="Sample 4">
+        <img src="placeholder5.jpg" alt="Sample 5">
+        <img src="placeholder6.jpg" alt="Sample 6">
+      </section>
+    </div>
+    
+  </main>
+
+ <footer class="footer">
+    <div class = 'footer-wrapper'>
+    <ul class="footer-list">
+        <li class="tagline">Capturing (E)motion Since <span class="year-fix">2010</span>, One Frame At a Time</li>
+        <li>© <strong>All Rights Reserved</strong></li>
+        <li><a href="../Notice/Index.html">Notice</a></li>
+    </ul>
+    </div>
+  </footer>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const hamburgerWrapper = document.querySelector(".hamburger-wrapper");
+        const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+        // Ensure dropdown starts closed
+        hamburgerWrapper.classList.remove("active");
+
+        // Toggle dropdown on hamburger click
+        hamburgerMenu.addEventListener("click", function(e) {
+            e.stopPropagation(); // prevent the click from closing immediately
+            hamburgerWrapper.classList.toggle("active");
+        });
+
+        // Close dropdown when clicking anywhere outside
+        document.addEventListener("click", function(e) {
+            if (!hamburgerWrapper.contains(e.target)) {
+                hamburgerWrapper.classList.remove("active");
+            }
+        });
+    });
+
+
+    // PROJECTS DROPDOWN - ACTIVE PROJECT
+const projBtn = document.querySelector('.projects-btn');
+const projMenu = document.querySelector('.projects-menu');
+const projLinks = document.querySelectorAll('.projects-menu li a');
+
+// Replace with the filename of this page
+const currentPage = 'Layers.html';  // <-- set this to the actual HTML filename
+
+// Highlight active project and set button text
+projLinks.forEach(link => {
+    const linkPage = link.getAttribute('href').split('/').pop();
+    if (linkPage === currentPage) {
+        link.classList.add('active_theme');      // highlight the menu item
+        projBtn.textContent = link.textContent + ' ▼'; // set button text
+        projBtn.classList.add('active');         // highlight button
+    }
+});
+
+// Toggle menu on click
+projBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = projMenu.style.display === 'block';
+    projMenu.style.display = isOpen ? 'none' : 'block';
+    projBtn.classList.toggle('active', !isOpen);
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', () => {
+    projMenu.style.display = 'none';
+    projBtn.classList.remove('active');
+});
+
+  </script>
+
+</body>
+
+</html>
