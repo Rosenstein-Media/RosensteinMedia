@@ -539,6 +539,9 @@ overflow-x: hidden;
         display: flex;
     }
 
+    .image-gallery {
+        column-count: 2;
+    }
 
 }
 
@@ -622,6 +625,10 @@ overflow-x: hidden;
         display: inline-flex;
         transform: scale(0.80);
         transform-origin: top center;
+    }
+
+    .image-gallery {
+        column-count: 2;
     }
 } 
 
