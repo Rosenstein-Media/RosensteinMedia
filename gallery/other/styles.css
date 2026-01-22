@@ -216,7 +216,6 @@ h1 {
   position: fixed;
   justify-content: center;
   top: 100px;
-  z-index: 998;
 }
 
 .category-ribbon {
