@@ -633,11 +633,13 @@ overflow-x: hidden;
         transform: scale(0.80);
         transform-origin: top center;
     }
-} 
 
- .image-gallery {
+    .image-gallery {
         column-count: 2;
     }
+} 
+
+ 
 
 
 @media (min-width: 686px) and (max-width: 1024px) {
