@@ -549,6 +549,10 @@ overflow-x: hidden;
         display: flex;
     }
 
+    .image-gallery {
+        column-count: 2;
+    }
+
 
 }
 
@@ -630,6 +634,10 @@ overflow-x: hidden;
         transform-origin: top center;
     }
 } 
+
+ .image-gallery {
+        column-count: 2;
+    }
 
 
 @media (min-width: 686px) and (max-width: 1024px) {
