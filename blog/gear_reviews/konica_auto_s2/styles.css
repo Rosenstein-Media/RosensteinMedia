@@ -718,7 +718,7 @@ overflow-x: hidden;
     /* Toggle handle */
     .sidebar-toggle {
         position: fixed;
-        top: 85px;
+        top: 75px;
         left: 0;
         transform: translateY(-50%);
         width: 25px;
