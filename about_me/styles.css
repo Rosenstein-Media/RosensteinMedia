@@ -188,6 +188,7 @@ h3 {
     text-align: Justify;
     position: absolute;
     top: 115px;
+    bottom: 65px;
     overflow-y: auto;
     overflow-x: hidden;
 
