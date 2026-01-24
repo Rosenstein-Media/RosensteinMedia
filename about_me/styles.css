@@ -473,7 +473,7 @@ h3 {
         grid-template-columns: 1fr;
         align-items: start; /* optional, keeps content at top */
         padding-top: 80px;
-        padding-bottom: 80px; /* space for fixed footer */
+        padding-bottom: 140px; /* space for fixed footer */
         max-width: 90%; /* optional for mobile */
         margin: 20px auto;
         justify-items: center;
