@@ -530,7 +530,11 @@ h1 {
 
     .menu-wrapper {
       top: 85px;
-      padding: 12px 18px;
+      padding-top: 12px;
+      padding-right: 18px;
+      padding-bottom: 140px;
+      padding-left: 18px;
+    }
     }
 
     .collapsible-content {
