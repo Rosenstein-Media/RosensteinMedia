@@ -709,6 +709,7 @@ overflow-x: hidden;
 
     /* Content goes full width */
     .content-wrapper {
+        top: 90px;
         left: 0;
         width: 100%;
         padding-bottom: 140px;
