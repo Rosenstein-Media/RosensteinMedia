@@ -692,7 +692,7 @@ overflow-x: hidden;
     /* Sidebar becomes off-canvas overlay */
     .blog-sidebar {
         position: fixed;
-        top: 100px; /* matches content-wrapper */
+        top: 90px; /* matches content-wrapper */
         bottom: 65px;
         left: -260px;
         width: 260px;
