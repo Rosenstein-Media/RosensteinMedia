@@ -19,7 +19,6 @@ main {
     align-items: center;
     position: relative;
     overflow-x: hidden;
-    overflow-y: auto;
 }
 
 .intro-wrapper {
@@ -189,6 +188,9 @@ h3 {
     text-align: Justify;
     position: absolute;
     top: 115px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
 }
 
 .portrait {
