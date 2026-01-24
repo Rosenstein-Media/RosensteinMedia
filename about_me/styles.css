@@ -471,14 +471,12 @@ h3 {
 
     .about-container {
         display: grid;
-        top: auto;          /* remove top offset */
-        bottom: auto;       /* remove bottom offset */
+        top: 90px;          /* remove top offset */
+        bottom: 65px;       /* remove bottom offset */
         grid-template-columns: 1fr;
         align-items: start; /* optional, keeps content at top */
-        padding-top: 80px;
         padding-bottom: 140px; /* space for fixed footer */
         max-width: 90%; /* optional for mobile */
-        margin: 20px auto;
         justify-items: center;
     }
 
