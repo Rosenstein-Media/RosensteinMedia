@@ -626,6 +626,40 @@ overflow-x: hidden;
     .image-gallery {
             column-count: 2;
         }
+
+
+
+
+
+    .lightbox {
+    height: 100dvh;            /* real viewport height */
+    padding: 20px 15px;        /* slightly tighter padding */
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+
+  /* Let image flex instead of dominate */
+  #lightbox-img {
+    flex: 1;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  /* Lock caption + arrows so they never get pushed off */
+  .caption,
+  .lightbox-nav-container {
+    flex-shrink: 0;
+  }
+
+  /* Slightly tighten caption spacing on small screens */
+  .caption {
+    margin-top: 10px;
+    font-size: 0.95rem;
+  }
+
+
+  
             
 } 
 
