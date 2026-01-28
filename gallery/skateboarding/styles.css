@@ -628,36 +628,6 @@ overflow-x: hidden;
         }
 
 
-
-
-
-   .lightbox {
-    height: 100dvh;           /* full mobile viewport */
-    padding: 20px 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* top = image, bottom = caption+arrows */
-    overflow: hidden;
-  }
-
-  /* Image auto-fits remaining space */
-  #lightbox-img {
-    width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    display: block;
-    flex: 1 1 auto;           /* grow/shrink naturally */
-  }
-
-  /* Caption + arrows stay at bottom */
-  .caption,
-  .lightbox-nav-container {
-    flex-shrink: 0;
-    text-align: center;
-    margin-top: 10px;
-  }
-
-
             
 } 
 
