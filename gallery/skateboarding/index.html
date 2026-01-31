@@ -229,6 +229,46 @@ document.querySelector('.lightbox-next').addEventListener('click', () => {
     showImage(nextIndex);
 });
 
+
+/* Mobile swipe support for lightbox */
+if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  const lightbox = document.getElementById('lightbox');
+
+  if (lightbox) {
+
+    lightbox.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].clientX;
+      handleSwipe();
+    });
+
+    function handleSwipe() {
+      const swipeThreshold = 50; // px
+      const diffX = touchStartX - touchEndX;
+
+      if (Math.abs(diffX) > swipeThreshold) {
+        if (diffX > 0) {
+          // swipe left → next image
+          showImage((currentIndex + 1) % images.length);
+        } else {
+          // swipe right → previous image
+          showImage((currentIndex - 1 + images.length) % images.length);
+        }
+      }
+    }
+
+  }
+}
+
+
+
   </script>
 
 
