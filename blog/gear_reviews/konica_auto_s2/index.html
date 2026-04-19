@@ -67,16 +67,9 @@
         <div class="sidebar-wrapper">
         <aside class="blog-sidebar">
             <h4>Archive</h4>
-
-                <nav class="sidebar-topics">
-                
-                    <h5>Gear Reviews</h5>
-                    <ul>
-                        <li><a href="../fuji_x100vi/index.html">2. Fuji X100VI</a></li>
-                        <li><a href="../konica_auto_s2/index.html">1. Konica Auto S2</a></li>
-                    </ul>
-
-                </nav>
+            <nav class="sidebar-topics" id="sidebar">
+                <!-- Dynamic Sidebar will be populated by JS -->
+            </nav>
         </aside>
         </div>
 
@@ -250,6 +243,53 @@ document.addEventListener("DOMContentLoaded", () => {
         toggle.innerHTML = sidebar.classList.contains("open") ? "&lt;" : "&gt;";
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Sidebar toggle functionality for mobile view
+    const sidebar = document.querySelector(".blog-sidebar");
+    const sidebarToggle = document.querySelector(".sidebar-toggle");
+
+    // Ensure the sidebar starts collapsed
+    sidebar.classList.remove("open");
+
+    // Toggle the sidebar on mobile
+    sidebarToggle.addEventListener("click", function() {
+        sidebar.classList.toggle("open");
+        sidebarToggle.classList.toggle("open");
+        sidebarToggle.innerHTML = sidebar.classList.contains("open") ? "&lt;" : "&gt;";
+    });
+
+    // Fetch the posts.json using the correct relative path
+    fetch('../../posts.json')  // Correcting the path here
+        .then(response => response.json())
+        .then(data => {
+            // Group posts by category
+            const categories = data.reduce((acc, post) => {
+                if (!acc[post.category]) acc[post.category] = [];
+                acc[post.category].push(post);
+                return acc;
+            }, {});
+
+            // Dynamically populate the Sidebar
+            let sidebarContent = '';
+            for (let category in categories) {
+                sidebarContent += `<h4>Archive</h4><ul>`;
+                sidebarContent += `<h5>${category}</h5><ul>`;
+                categories[category].forEach(post => {
+                    const postUrl = `../../${post.url}`;  // Prepend the relative path to avoid circular issues
+                    sidebarContent += `<li><a href="${postUrl}">${post.title}</a></li>`;  // Add post link
+                });
+                sidebarContent += '</ul>';
+            }
+
+            // Inject the sidebar content
+            sidebar.innerHTML = sidebarContent;
+        })
+        .catch(error => console.error('Error loading posts:', error));
+});
+
+
 
 
 </script>
