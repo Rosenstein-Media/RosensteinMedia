@@ -23,7 +23,7 @@ main {
 
 .intro-wrapper {
     position: fixed;
-    top: 45px;
+    top: 55px;
     width: 100vw;
     background: white;
     z-index: 999;
@@ -181,17 +181,18 @@ h3 {
     grid-template-rows: auto auto auto; /* Three rows */
     align-items: start;
     gap: 20px;
-    padding: 0px;
+    padding: 80px;
     padding-bottom: 25px;
-    max-width: 900px;
-    margin: 20px;
     text-align: Justify;
     position: absolute;
-    top: 115px;
+    top: 125px;
     bottom: 65px;
     overflow-y: auto;
     overflow-x: hidden;
+}
 
+.left-column {
+    padding-left: 120px;
 }
 
 .portrait {
@@ -448,6 +449,11 @@ h3 {
         display: flex;
     }
 
+.left-column {
+    padding-left: 0px;
+}
+
+
 }
 
 
@@ -456,8 +462,7 @@ h3 {
 
     .intro-wrapper {
         display: inline-flex;
-        top: 20px;
-        padding-top: 25px;
+        top: 40px;
         transform: scale(0.80);
         transform-origin: top center;
         width: 100vh;

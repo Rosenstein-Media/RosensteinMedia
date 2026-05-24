@@ -139,7 +139,7 @@ main {
 
 .intro-wrapper {
     position: fixed;
-    top: 45px;
+    top: 55px;
     width: 100vw;
     background: white;
     z-index: 999;
@@ -174,7 +174,7 @@ h2 {
 
 .contact-form {
     position: absolute;
-    top: 90px;
+    top: 100px;
     bottom: 65px;
     left: 0;
     right: 0;

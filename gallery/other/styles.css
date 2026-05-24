@@ -144,7 +144,7 @@ main > * {
 
 .intro-wrapper {
     position: fixed;
-    top: 45px;
+    top: 55px;
     width: 100vw;
     background: white;
     z-index: 999;
@@ -214,7 +214,7 @@ h1 {
 .category-wrapper {
   position: fixed;
   justify-content: center;
-  top: 100px;
+  top: 110px;
 }
 
 .category-ribbon {
@@ -263,7 +263,7 @@ h1 {
 
 .gallery-wrap {
 position: absolute;
-top: 140px;
+top: 145px;
 bottom: 65px;
 left: 0;
 right: 0;
@@ -559,7 +559,7 @@ overflow-x: hidden;
 
 .intro-wrapper {
         display: inline-flex;
-        top: 30px;
+        top: 35px;
         transform: scale(0.80);
         transform-origin: top center;
         width: 100vh;
@@ -574,7 +574,7 @@ overflow-x: hidden;
 
     .category-wrapper {
         position: fixed;
-        top: 75px;
+        top: 80px;
         justify-content: center;
         transform: scale(0.90);
         transform-origin: top center;
@@ -600,7 +600,7 @@ overflow-x: hidden;
 
 
   .gallery-wrap{
-    top: 135px;
+    top: 140px;
   }
     
 

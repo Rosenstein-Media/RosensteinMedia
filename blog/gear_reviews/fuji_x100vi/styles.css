@@ -23,12 +23,12 @@ main {
   overflow-x: hidden;
   overflow-y: auto;
 
-  /* ✨ NEW: this controls vertical spacing between children */
+  /*  NEW: this controls vertical spacing between children */
   gap: 8px;
 }
 
 main > * {
-  /* ✨ NEW: neutralize any default margins & padding */
+  /*  NEW: neutralize any default margins & padding */
   margin: 0;
   padding: 0;
 }
@@ -144,7 +144,7 @@ main > * {
 
 .intro-wrapper {
     position: fixed;
-    top: 45px;
+    top: 55px;
     width: 100vw;
     background: white;
     z-index: 999;
@@ -192,7 +192,7 @@ h2 {
 
 .content-wrapper {
     position: absolute;
-    top: 100px;
+    top: 105px;
     bottom: 65px;
     left: 275px;
     right: 0;
@@ -258,7 +258,7 @@ h2 {
 
 .sidebar-wrapper{
     position: absolute;
-    top: 100px;
+    top: 105px;
     bottom: 65px;
     left: 0px;
     width: 250px;
@@ -596,7 +596,7 @@ overflow-x: hidden;
     /* Sidebar becomes off-canvas overlay */
     .blog-sidebar {
         position: fixed;
-        top: 100px; /* matches content-wrapper */
+        top: 105px; /* matches content-wrapper */
         bottom: 65px;
         left: -260px;
         width: 260px;
@@ -663,7 +663,7 @@ overflow-x: hidden;
 
 .intro-wrapper {
         display: inline-flex;
-        top: 30px;
+        top: 40px;
         transform: scale(0.80);
         transform-origin: top center;
         width: 100vh;
@@ -692,7 +692,7 @@ overflow-x: hidden;
     /* Sidebar becomes off-canvas overlay */
     .blog-sidebar {
         position: fixed;
-        top: 90px; /* matches content-wrapper */
+        top: 100px; /* matches content-wrapper */
         bottom: 65px;
         left: -260px;
         width: 260px;
@@ -709,7 +709,7 @@ overflow-x: hidden;
 
     /* Content goes full width */
     .content-wrapper {
-        top: 90px;
+        top: 100px;
         left: 0;
         width: 100%;
         padding-bottom: 140px;
@@ -718,7 +718,7 @@ overflow-x: hidden;
     /* Toggle handle */
     .sidebar-toggle {
         position: fixed;
-        top: 75px;
+        top: 85px;
         left: 0;
         transform: translateY(-50%);
         width: 25px;

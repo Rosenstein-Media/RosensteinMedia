@@ -144,7 +144,7 @@ main > * {
 
 .intro-wrapper {
     position: fixed;
-    top: 45px;
+    top: 55px;
     width: 100vw;
     background: white;
     z-index: 999;
@@ -192,7 +192,7 @@ h2 {
 
 .content-wrapper {
     position: absolute;
-    top: 130px;
+    top: 145px;
     bottom: 65px;
     left: 275px;
     right: 0;
@@ -256,9 +256,9 @@ h2 {
 }
 
 
-.sidebar-wrapper{
+.sidebar-wrapper {
     position: absolute;
-    top: 130px;
+    top: 145px;
     bottom: 65px;
     left: 0px;
     width: 250px;
@@ -596,7 +596,7 @@ overflow-x: hidden;
     /* Sidebar becomes off-canvas overlay */
     .blog-sidebar {
         position: fixed;
-        top: 130px; /* matches content-wrapper */
+        top: 145px; /* matches content-wrapper */
         bottom: 65px;
         left: -260px;
         width: 260px;
@@ -620,7 +620,7 @@ overflow-x: hidden;
     /* Toggle handle */
     .sidebar-toggle {
         position: fixed;
-        top: 115px;
+        top: 130px;
         left: 0;
         transform: translateY(-50%);
         width: 25px;
@@ -663,7 +663,7 @@ overflow-x: hidden;
 
 .intro-wrapper {
         display: inline-flex;
-        top: 30px;
+        top: 40px;
         transform: scale(0.80);
         transform-origin: top center;
         width: 100vh;

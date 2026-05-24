@@ -145,7 +145,7 @@ main > * {
 
 .intro-wrapper {
     position: fixed;
-    top: 45px;
+    top: 55px;
     width: 100vw;
     background: white;
     z-index: 999;
@@ -174,7 +174,7 @@ h1 {
 
 .featured-wrapper {
     position: fixed;
-    top: 130px;
+    top: 135px;
     width: 100vw;
     background: white;
     z-index: 999;
@@ -226,7 +226,7 @@ h2 {
 .category-wrapper {
   position: fixed;
   justify-content: center;
-  top: 100px;
+  top: 105px;
 }
 
 .category-ribbon {
@@ -571,7 +571,7 @@ overflow-x: hidden;
 
 .intro-wrapper {
         display: inline-flex;
-        top: 30px;
+        top: 35px;
         transform: scale(0.80);
         transform-origin: top center;
         width: 100vh;
@@ -588,7 +588,7 @@ overflow-x: hidden;
     }
     .category-wrapper {
         position: fixed;
-        top: 75px;
+        top: 80px;
         justify-content: center;
         transform: scale(0.90);
         transform-origin: top center;
@@ -614,7 +614,7 @@ overflow-x: hidden;
 
 
   .gallery-wrap{
-    top: 155px;
+    top: 165px;
   }
     
 
@@ -649,6 +649,7 @@ overflow-x: hidden;
 
     .image-gallery {
             column-count: 2;
+            padding-top: 10px;
             padding-bottom: 140px;
         }
 
