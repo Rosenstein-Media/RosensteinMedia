@@ -343,24 +343,67 @@ overflow-x: hidden;
 }
 
 .image-gallery {
-  position: relative;
-  column-count: 3;
-  column-gap: 10px;
-  padding-top: 0px;
-  padding-bottom: 10px;
-  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+  width: 85%;
   max-width: 1200px;
-  overflow-y: auto;
   margin: 0 auto;
+  padding-bottom: 10px;
+  align-content: start;
 }
 
 .image-gallery img {
   width: 100%;
   height: auto;
   display: block;
-  break-inside: avoid;
-  margin-bottom: 10px;
+  align-self: center;
 }
+
+.thumb1 {
+  grid-column: span 6;
+  grid-row: span 1;
+  align-self: center;
+
+}
+
+.thumb2 {
+  grid-column: span 6;
+  grid-row: span 1;
+}
+.thumb3 {
+  grid-column: span 6;
+  grid-row: span 1;
+}
+
+.thumb4 {
+  grid-column: span 6;
+  grid-row: span 2;
+  align-self: center;
+}
+
+.thumb5 {
+  grid-column: span 6;
+  grid-row: span 1;
+}
+
+.thumb6 {
+  grid-column: span 4;
+  grid-row: span 1;
+}
+
+.thumb7 {
+  grid-column: span 8;
+  grid-row: span 1;
+}
+
+.thumb8 {
+  grid-column: 3 / 11;
+  grid-row: span 1;
+}
+
+
+
 
 
 .thumb {
