@@ -274,25 +274,66 @@ overflow-x: hidden;
 }
 
 .image-gallery {
-  display: flex;
-  flex-wrap: wrap;         /* allow multiple rows */
-  justify-content: flex-start; /* align left */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   gap: 10px;
-  padding-top: 0px;
-  padding-bottom: 10px;
   width: 90%;
   max-width: 1200px;
-  overflow-y: auto;
   margin: 0 auto;
+  padding-bottom: 10px;
+  align-content: start;
+}
+
+.thumb-link {
+  display: block;
+  width: 100%;
+  min-width: 0; 
+  text-decoration: none;
 }
 
 .image-gallery img {
   width: 100%;
   height: auto;
   display: block;
-  break-inside: avoid;
-  margin-bottom: 10px;
+  align-self: center;
 }
+
+.thumb1 {
+  grid-column: span 6;
+  grid-row: span 2;
+}
+
+.thumb2 {
+  grid-column: span 6;
+  grid-row: span 1;
+  align-self: center;
+}
+
+.thumb3 {
+  grid-column: span 6;
+  grid-row: span 1;
+  align-self: center;
+}
+
+.thumb4 {
+  grid-column: span 6;
+  grid-row: span 1;
+  align-self: center;
+}
+
+.thumb5 {
+  grid-column: span 6;
+  grid-row: span 2;
+  align-self: center;
+}
+
+.thumb6 {
+  grid-column: span 6;
+  grid-row: span 2;
+  align-self: center;
+}
+
+
 
 .thumb {
   cursor: pointer;
@@ -304,9 +345,8 @@ overflow-x: hidden;
 
 .thumb-container {
   position: relative;
-  width: 300px;              /* FIXED width for each thumbnail */
+  width: 100%;              /* FIXED width for each thumbnail */
   flex: 0 0 auto;            /* prevents flex from overriding width */
-  margin-bottom: 12px;
 }
 
 .thumb-container img.thumb {
@@ -674,6 +714,13 @@ overflow-x: hidden;
 @media (min-width: 686px) and (max-width: 1024px) {
   .category-wrapper {
     transform: scale(0.85);       /* slightly smaller */
+    transform-origin: top center; /* keep it centered */
+  }
+}
+
+@media (min-width: 300px) and (max-width: 374px) {
+  .category-wrapper {
+    transform: scale(0.80);       /* slightly smaller */
     transform-origin: top center; /* keep it centered */
   }
 }

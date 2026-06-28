@@ -677,3 +677,10 @@ overflow-x: hidden;
     transform-origin: top center; /* keep it centered */
   }
 }
+
+@media (min-width: 300px) and (max-width: 374px) {
+  .category-wrapper {
+    transform: scale(0.80);       /* slightly smaller */
+    transform-origin: top center; /* keep it centered */
+  }
+}
