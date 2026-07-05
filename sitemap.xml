@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://rosensteinmedia.com/</loc>
+  </url>
+
+  <url>
+    <loc>https://rosensteinmedia.com/about_me</loc>
+  </url>
+
+  <url>
+    <loc>https://rosensteinmedia.com/blog</loc>
+  </url>
+
+  <url>
+    <loc>https://rosensteinmedia.com/contact</loc>
+  </url>
+
+  <!-- Gallery -->
+  <url>
+    <loc>https://rosensteinmedia.com/gallery</loc>
+  </url>
+
+  <url>
+    <loc>https://rosensteinmedia.com/gallery/architecture</loc>
+  </url>
+
+  <url>
+    <loc>https://rosensteinmedia.com/gallery/archive</loc>
+  </url>
+
+  <url>
+    <loc>https://rosensteinmedia.com/gallery/assignments</loc>
+  </url>
+
+  <url>
+    <loc>https://rosensteinmedia.com/gallery/assignments/justis-fancy-lad</loc>
+  </url>
+
+  <url>
+    <loc>https://rosensteinmedia.com/gallery/assignments/nascar</loc>
+  </url>
+
+  <url>
+    <loc>https://rosensteinmedia.com/gallery/cityscape</loc>
+  </url>
+
+  <url>
+    <loc>https://rosensteinmedia.com/gallery/concert</loc>
+  </url>
+
+  <url>
+    <loc>https://rosensteinmedia.com/gallery/featured_photos</loc>
+  </url>
+
+  <url>
+    <loc>https://rosensteinmedia.com/gallery/portrait</loc>
+  </url>
+
+  <url>
+    <loc>https://rosensteinmedia.com/gallery/product</loc>
+  </url>
+
+  <url>
+    <loc>https://rosensteinmedia.com/gallery/skateboarding</loc>
+  </url>
+
+  <!-- Other top-level pages -->
+  <url>
+    <loc>https://rosensteinmedia.com/notice</loc>
+  </url>
+
+  <url>
+    <loc>https://rosensteinmedia.com/prints</loc>
+  </url>
+
+  <url>
+    <loc>https://rosensteinmedia.com/services</loc>
+  </url>
+
+</urlset>
