@@ -725,7 +725,12 @@ overflow-x: hidden;
     top: 165px;
   }
     
+  .image-gallery {
+    justify-content: center;
+    padding-bottom: 140px;
+  }
 
+  
   .lightbox {
     max-width: 90%;
     max-height: 80%
